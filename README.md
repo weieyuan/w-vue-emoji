@@ -1,4 +1,4 @@
-# w-emoji
+# w-vue-emoji
 
 最近一个项目需要用到emoji表情包，从网上搜集到的信息来看，绝大部分的emoji项目都侧重怎么在界面上展示emoji表情。
 
