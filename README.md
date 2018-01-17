@@ -15,8 +15,8 @@
 ## Requirements
 **Vue 2.0**
 
-**bootstrap**
-[参考](https://getbootstrap.com/docs/4.0/getting-started/webpack)
+**bootstrap**  
+[参考](https://getbootstrap.com/docs/4.0/getting-started/webpack)  
 使用参考：
 
 ```
@@ -28,8 +28,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap'
 ```
 
-**jquery**
-bootstrap depends jquery
+**jquery**  
+bootstrap depends jquery  
 使用参考：
 
 ```
