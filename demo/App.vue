@@ -5,13 +5,16 @@
       <p><b>Input message which will be stored in database: </b></p>
       <p>{{inputMessage}}</p>
       <textarea v-model="inputMessage"></textarea>
-      <div style="position: relative">
+      <div style="width: 30px; height: 30px; position: relative">
+        <!--单个表情-->
         <emoji-item :emojiObj="smileEmoji" @onClickEmoji="onClickEmojiBtn"></emoji-item>
+        <!--选择表情的对话框-->
         <c-emoji ref="ref4CEmoji" @onClickEmoji="onClickChooseEmoji"></c-emoji>
       </div>
     </div>
     <div>
       <p><b>Get message form database, and show in page: </b></p>
+      <!--将文本解析成表情符号展示-->
       <display-info-with-emoji :msg="inputMessage"></display-info-with-emoji>
     </div>
   </div>

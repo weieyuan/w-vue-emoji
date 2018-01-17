@@ -1,6 +1,3 @@
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap'
-
 import {smileEmoji} from "./data/emoji_icon"
 import EmojiItem from "./components/EmojiItem"
 import CEmoji from "./components/CEmoji"
