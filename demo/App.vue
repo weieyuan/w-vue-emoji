@@ -40,7 +40,7 @@
     },
     data() {
       return {
-        msg: 'This is a demo to show how to use w-emoji',
+        msg: 'This is a demo to show how to use w-vue-emoji',
         smileEmoji,
         inputMessage: ""
       }
