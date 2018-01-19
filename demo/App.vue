@@ -51,7 +51,9 @@
       },
       onClickChooseEmoji(emoji) {
         let str = convertEmoji2Str(emoji);
-        this.inputMessage += str;
+        let oElement = this.$el.querySelector("textarea");
+        let index = oElement.selectionStart;//返回选中文本的开始索引，如果没有选中文本，那么返回光标后字符的索引
+        this.inputMessage = this.inputMessage.slice(0, index) + str + this.inputMessage.slice(index);
       }
     },
   }
