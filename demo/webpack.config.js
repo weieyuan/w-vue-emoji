@@ -6,7 +6,7 @@ module.exports = {
   entry: "./demo/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
-    publicPath: "/demo/dist/",
+    publicPath: "/",
     filename: "build.js"
   },
   module: {
@@ -64,19 +64,17 @@ module.exports = {
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
-  devtool: '#source-map',
+  devtool: '#eval-source-map',
   devServer: {
-    contentBase: __dirname,
-    // publicPath: "/demo/dist/",
-    index: "index.html",
+    contentBase: path.resolve(__dirname, "dist"),
+    publicPath: "/",
+    index: "home.html",
     port: 8082,
-    historyApiFallback: true,
-    noInfo: true,
-    overlay: true
+    compress: true
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: path.resolve(__dirname, 'home.html'),
+      filename: "home.html",
       template: path.resolve(__dirname, 'index.html'),
       inject: true
     }),

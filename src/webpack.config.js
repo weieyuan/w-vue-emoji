@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   entry: './src/emoji/index.js',
@@ -58,7 +59,8 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
+  externals: ["jquery", "bootstrap", "emoji-mart-vue"]
 }
 
 if (process.env.NODE_ENV === 'production') {
@@ -70,6 +72,7 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
+    new CleanWebpackPlugin(["dist"]),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
       compress: {
